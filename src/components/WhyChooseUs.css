@@ -1,0 +1,106 @@
+.wcu-corporate-wrapper {
+  width: 100%;
+  background-color: #F9FAFB; /* Soft corporate gray */
+  padding: 80px 0;
+  border-top: 1px solid #F3F4F6;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.wcu-corporate-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 60px;
+}
+
+.wcu-corporate-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #111827; /* Dark authoritative tone */
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.wcu-corporate-subtitle {
+  font-size: 1.15rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+.corporate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.corporate-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: calc(33.333% - 20px);
+  min-width: 300px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.corporate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border-color: #D1D5DB;
+}
+
+.corp-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background: rgba(197, 75, 140, 0.08); /* Extremely subtle Mulberry tint */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  transition: background 0.3s ease;
+}
+
+.corporate-card:hover .corp-icon-wrapper {
+  background: rgba(197, 75, 140, 0.15); /* Slightly darker tint on hover */
+}
+
+.corp-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.corp-content p {
+  font-size: 1rem;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1024px) {
+  .corporate-card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .wcu-corporate-wrapper {
+    padding: 60px 0;
+  }
+  .wcu-corporate-title {
+    font-size: 2.25rem;
+  }
+  .corporate-card {
+    width: 100%;
+    padding: 30px 25px;
+  }
+}

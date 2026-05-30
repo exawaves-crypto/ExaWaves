@@ -1,0 +1,473 @@
+/* ============================================= */
+/* Corporate Letter of Recommendation Template   */
+/* ExaWaves Technology — Brand Theme              */
+/* ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap');
+
+.lor-template {
+  width: 800px;
+  min-height: 1130px;
+  background: #ffffff;
+  font-family: 'Lora', 'Georgia', serif;
+  color: #1a1a2e;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Letterhead Top Bar ── */
+.lor-letterhead-bar {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg, #922B62, #C54B8C, #922B62);
+}
+
+/* ── Letterhead Header ── */
+.lor-letterhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 56px 20px;
+  border-bottom: 2px solid #C54B8C;
+  position: relative;
+}
+
+.lor-letterhead::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 56px;
+  right: 56px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 75, 140, 0.3), transparent);
+}
+
+.lor-company-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lor-company-logo img {
+  height: 48px;
+  object-fit: contain;
+}
+
+.lor-company-details h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #922B62;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.lor-company-details p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  color: #6b7280;
+  margin: 2px 0 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.lor-contact-info {
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+}
+
+.lor-contact-info p {
+  font-size: 0.62rem;
+  color: #6b7280;
+  margin: 2px 0;
+  line-height: 1.5;
+}
+
+.lor-contact-info a {
+  color: #922B62;
+  text-decoration: none;
+}
+
+/* ── Watermark ── */
+.lor-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.lor-watermark img {
+  width: 100%;
+  height: auto;
+}
+
+/* ── Letter Body ── */
+.lor-body {
+  padding: 32px 56px 24px;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+/* Reference & Date Row */
+.lor-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.lor-ref-number {
+  font-size: 0.72rem;
+  color: #6b7280;
+}
+
+.lor-ref-number span {
+  font-weight: 600;
+  color: #922B62;
+  letter-spacing: 0.03em;
+}
+
+.lor-date {
+  font-size: 0.72rem;
+  color: #6b7280;
+  text-align: right;
+}
+
+.lor-date span {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+/* Title Section */
+.lor-title-section {
+  text-align: center;
+  margin: 16px 0 28px;
+  position: relative;
+}
+
+.lor-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #922B62;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.lor-title::before,
+.lor-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C54B8C);
+}
+
+.lor-title::before {
+  right: calc(100% + 16px);
+  background: linear-gradient(90deg, transparent, #C54B8C);
+}
+
+.lor-title::after {
+  left: calc(100% + 16px);
+  background: linear-gradient(270deg, transparent, #C54B8C);
+}
+
+.lor-title-underline {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #C54B8C, #922B62);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Salutation */
+.lor-salutation {
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Body Paragraphs */
+.lor-paragraph {
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: #2d2d44;
+  text-align: justify;
+  margin-bottom: 16px;
+  text-indent: 2em;
+}
+
+.lor-paragraph strong {
+  color: #1a1a2e;
+  font-weight: 700;
+}
+
+.lor-paragraph .highlight-name {
+  color: #922B62;
+  font-weight: 700;
+}
+
+/* Employee Details Box */
+.lor-details-box {
+  margin: 20px 0;
+  border: 1px solid rgba(197, 75, 140, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  background: rgba(197, 75, 140, 0.02);
+}
+
+.lor-details-box-header {
+  background: linear-gradient(135deg, #922B62, #C54B8C);
+  padding: 8px 20px;
+}
+
+.lor-details-box-header h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.lor-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.lor-detail-item {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(197, 75, 140, 0.08);
+  border-right: 1px solid rgba(197, 75, 140, 0.08);
+}
+
+.lor-detail-item:nth-child(even) {
+  border-right: none;
+}
+
+.lor-detail-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.lor-detail-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #9ca3af;
+  margin: 0 0 3px;
+  font-weight: 500;
+}
+
+.lor-detail-value {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+/* Skills Section */
+.lor-skills-section {
+  margin: 20px 0;
+}
+
+.lor-skills-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #922B62;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.lor-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lor-skill-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #922B62;
+  background: rgba(197, 75, 140, 0.08);
+  border: 1px solid rgba(197, 75, 140, 0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Closing */
+.lor-closing {
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: #2d2d44;
+  margin: 20px 0 8px;
+}
+
+.lor-regards {
+  margin-top: 24px;
+  font-size: 0.88rem;
+  color: #2d2d44;
+}
+
+/* ── Footer / Signature Section ── */
+.lor-footer {
+  padding: 0 56px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.lor-signature-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.lor-signature-block {
+  text-align: left;
+}
+
+.lor-sig-line {
+  width: 180px;
+  border: none;
+  border-bottom: 1.5px solid #1a1a2e;
+  margin: 0 0 8px;
+}
+
+.lor-sig-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.lor-sig-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  color: #6b7280;
+  margin: 2px 0 0;
+  font-weight: 500;
+}
+
+/* Company Seal */
+.lor-seal {
+  text-align: center;
+}
+
+.lor-seal-circle {
+  width: 90px;
+  height: 90px;
+  border: 2px solid #C54B8C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgba(197, 75, 140, 0.03);
+  position: relative;
+}
+
+.lor-seal-circle::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(197, 75, 140, 0.4);
+  border-radius: 50%;
+}
+
+.lor-seal-circle img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.lor-seal-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9ca3af;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ── Bottom Bar ── */
+.lor-bottom-section {
+  margin-top: auto;
+  padding: 0 56px 0;
+}
+
+.lor-bottom-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 75, 140, 0.3), transparent);
+  margin: 20px 0 12px;
+}
+
+.lor-bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 6px;
+}
+
+.lor-bottom-info p {
+  font-size: 0.55rem;
+  color: #9ca3af;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.lor-bottom-info a {
+  color: #922B62;
+  text-decoration: none;
+}
+
+.lor-bottom-bar {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #922B62, #C54B8C, #922B62);
+}
+
+/* ── Inner content wrapper ── */
+.lor-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 1122px;
+  position: relative;
+}
+
+/* ── Confidential Stamp (subtle) ── */
+.lor-confidential {
+  position: absolute;
+  top: 200px;
+  right: -30px;
+  transform: rotate(90deg);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: rgba(197, 75, 140, 0.12);
+  font-weight: 700;
+  z-index: 0;
+}

@@ -1,0 +1,466 @@
+/* ================================== */
+/* Vintage Patent Letter Template     */
+/* ================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+.patent-template {
+  width: 800px;
+  min-height: 1130px;
+  background: #f5f0e8;
+  font-family: 'EB Garamond', 'Georgia', serif;
+  color: #2c1810;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Parchment texture overlay */
+.patent-template::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(139, 119, 90, 0.03) 28px,
+      rgba(139, 119, 90, 0.03) 29px
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Aged edges effect */
+.patent-template::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 60%, rgba(160, 130, 90, 0.15) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.patent-border {
+  width: 100%;
+  min-height: 1130px;
+  padding: 8px;
+  background: linear-gradient(135deg, #8B6914, #C5A35A, #8B6914, #C5A35A, #8B6914);
+  position: relative;
+}
+
+.patent-inner-border {
+  width: 100%;
+  min-height: calc(1130px - 16px);
+  padding: 4px;
+  border: 2px solid #6B4A0A;
+}
+
+.patent-inner {
+  width: 100%;
+  min-height: calc(1130px - 28px);
+  background: #f5f0e8;
+  padding: 50px 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vintage ornamental corners */
+.patent-ornament {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.patent-ornament-tl {
+  top: 16px;
+  left: 16px;
+  border-top: 3px double #8B6914;
+  border-left: 3px double #8B6914;
+}
+
+.patent-ornament-tr {
+  top: 16px;
+  right: 16px;
+  border-top: 3px double #8B6914;
+  border-right: 3px double #8B6914;
+}
+
+.patent-ornament-bl {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 3px double #8B6914;
+  border-left: 3px double #8B6914;
+}
+
+.patent-ornament-br {
+  bottom: 16px;
+  right: 16px;
+  border-bottom: 3px double #8B6914;
+  border-right: 3px double #8B6914;
+}
+
+/* Inner decorative dots on corners */
+.patent-ornament::before {
+  content: '❖';
+  position: absolute;
+  font-size: 14px;
+  color: #8B6914;
+}
+
+.patent-ornament-tl::before { top: 8px; left: 8px; }
+.patent-ornament-tr::before { top: 8px; right: 8px; }
+.patent-ornament-bl::before { bottom: 8px; left: 8px; }
+.patent-ornament-br::before { bottom: 8px; right: 8px; }
+
+/* Watermark */
+.patent-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.patent-watermark img {
+  width: 100%;
+  height: auto;
+  filter: sepia(100%) contrast(50%);
+}
+
+/* Header */
+.patent-header {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.patent-company-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.patent-company-logo img {
+  height: 55px;
+  object-fit: contain;
+  filter: sepia(20%);
+}
+
+.patent-doc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #2c1810;
+  margin: 0 0 4px;
+  text-shadow: 1px 1px 0px rgba(139, 105, 20, 0.15);
+}
+
+.patent-doc-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #6B4A0A;
+  letter-spacing: 0.15em;
+  margin: 0;
+}
+
+/* Ornamental rule */
+.patent-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+  position: relative;
+  z-index: 3;
+}
+
+.patent-rule-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8B6914, #6B4A0A);
+}
+
+.patent-rule-line:last-child {
+  background: linear-gradient(90deg, #6B4A0A, #8B6914, transparent);
+}
+
+.patent-rule-diamond {
+  font-size: 12px;
+  color: #8B6914;
+  line-height: 1;
+}
+
+/* Patent Number */
+.patent-number-section {
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.patent-number-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #8a7560;
+  margin: 0 0 4px;
+}
+
+.patent-number-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #6B4A0A;
+  letter-spacing: 0.08em;
+  margin: 0;
+  padding: 6px 24px;
+  border: 1px solid #C5A35A;
+  display: inline-block;
+  background: rgba(197, 163, 90, 0.06);
+}
+
+/* Body */
+.patent-body {
+  position: relative;
+  z-index: 3;
+  flex: 1;
+}
+
+.patent-preamble {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #3d2b1f;
+  text-align: justify;
+  margin-bottom: 20px;
+  text-indent: 2em;
+}
+
+.patent-preamble strong {
+  color: #2c1810;
+  font-weight: 700;
+}
+
+.patent-student-highlight {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #6B4A0A;
+  text-align: center;
+  margin: 16px 0;
+  font-style: italic;
+  position: relative;
+}
+
+.patent-student-highlight::before,
+.patent-student-highlight::after {
+  content: '—';
+  margin: 0 12px;
+  color: #C5A35A;
+}
+
+/* Rights section */
+.patent-rights-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2c1810;
+  margin: 24px 0 14px;
+  text-align: center;
+}
+
+.patent-rights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.patent-rights-list li {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #3d2b1f;
+  padding: 6px 0 6px 28px;
+  position: relative;
+  text-align: justify;
+}
+
+.patent-rights-list li::before {
+  content: '§';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #8B6914;
+  font-weight: 700;
+}
+
+/* Projects section */
+.patent-projects-section {
+  text-align: center;
+  margin: 20px 0;
+  padding: 16px 24px;
+  border: 1px solid rgba(139, 105, 20, 0.2);
+  background: rgba(197, 163, 90, 0.04);
+}
+
+.patent-projects-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #8a7560;
+  margin: 0 0 8px;
+}
+
+.patent-projects-names {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c1810;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+/* Closing statement */
+.patent-closing {
+  font-size: 0.9rem;
+  line-height: 1.85;
+  color: #3d2b1f;
+  text-align: justify;
+  margin: 20px 0;
+  text-indent: 2em;
+}
+
+/* Footer */
+.patent-footer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  margin-top: auto;
+  padding-top: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.patent-signature {
+  text-align: center;
+}
+
+.patent-sig-line {
+  width: 160px;
+  border: none;
+  border-bottom: 1px solid #2c1810;
+  margin: 0 auto 8px;
+}
+
+.patent-sig-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2c1810;
+  margin: 0;
+}
+
+.patent-sig-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.75rem;
+  color: #8a7560;
+  margin: 2px 0 0;
+  font-style: italic;
+}
+
+/* Company Seal */
+.patent-seal {
+  text-align: center;
+  position: relative;
+}
+
+.patent-seal-circle {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #8B6914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgba(197, 163, 90, 0.05);
+  position: relative;
+}
+
+.patent-seal-circle::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid #C5A35A;
+  border-radius: 50%;
+}
+
+.patent-seal-circle img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: sepia(40%) contrast(80%);
+}
+
+.patent-seal-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #8a7560;
+  margin-top: 6px;
+}
+
+/* Issue info */
+.patent-issue-info {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #8a7560;
+}
+
+.patent-issue-info p {
+  margin: 3px 0;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.patent-issue-info strong {
+  color: #3d2b1f;
+}
+
+/* Bottom rule */
+.patent-bottom-rule {
+  text-align: center;
+  margin-top: 24px;
+  position: relative;
+  z-index: 3;
+}
+
+.patent-bottom-rule-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #8B6914 20%, #C5A35A 50%, #8B6914 80%, transparent 100%);
+  margin-bottom: 8px;
+}
+
+.patent-bottom-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #a09080;
+  margin: 0;
+}
